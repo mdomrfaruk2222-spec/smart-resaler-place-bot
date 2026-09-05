@@ -347,7 +347,7 @@ def main():
 
     setup_database()
 
-    token = os.getenv("BOT_TOKEN")
+    token = os.getenv("BOT_TOKEN", "").strip()
 
     if not token:
         print("ERROR: BOT_TOKEN environment variable is missing.")
